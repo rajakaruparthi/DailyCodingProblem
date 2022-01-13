@@ -1,4 +1,4 @@
-package com.dailycoding.problem;
+package com.daily.coding;
 
 /*
 Given the root to a binary tree, implement serialize(root),

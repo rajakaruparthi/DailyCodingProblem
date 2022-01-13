@@ -1,4 +1,4 @@
-package com.dailycoding.problem;
+package com.daily.coding;
 
 /*
 Given an integer k and a string s, find the length of the longest substring that contains at most k distinct characters.
@@ -20,20 +20,21 @@ public class Problem13 {
 
     private void longestSubstring(String input, int k) {
         HashMap<String, Integer> map = new HashMap<>();
-        for(int i=0; i < input.length()-k; i++) {
+        for (int i = 0; i < input.length() - k; i++) {
             int startIndex = i;
             String eachSubstring = getSubstringWithKuniqueChars(startIndex, input, k);
             map.put(eachSubstring, eachSubstring.length());
         }
-        map.put(input.substring(input.length()-k), k);
+        map.put(input.substring(input.length() - k), k);
         System.out.println(getMaxSubString(map));
     }
 
     private String getMaxSubString(HashMap<String, Integer> map) {
-        int max = 0;String output = "";
-        for (String key: map.keySet()) {
+        int max = 0;
+        String output = "";
+        for (String key : map.keySet()) {
             int val = map.get(key);
-            if(val > max){
+            if (val > max) {
                 max = val;
                 output = key;
             }
@@ -44,16 +45,16 @@ public class Problem13 {
     private String getSubstringWithKuniqueChars(int startIndex, String input, int k) {
         Map<Character, Integer> map = new HashMap<>();
         int i = startIndex;
-        String out ="";
-        while (map.keySet().size() <= k){
+        String out = "";
+        while (map.keySet().size() <= k) {
             char character = input.charAt(startIndex);
-            if(map.containsKey(character)) {
-                map.put(character, map.get(character)+1);
-            }else {
+            if (map.containsKey(character)) {
+                map.put(character, map.get(character) + 1);
+            } else {
                 map.put(character, 1);
             }
-            if(startIndex < input.length()) {
-                out =input.substring(i, startIndex);
+            if (startIndex < input.length()) {
+                out = input.substring(i, startIndex);
                 startIndex++;
             }
         }

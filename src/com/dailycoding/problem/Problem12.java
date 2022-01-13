@@ -1,4 +1,4 @@
-package com.dailycoding.problem;
+package com.daily.coding;
 
 /*
 There exists a staircase with N steps, and you can climb up either 1 or 2 steps at a time.
@@ -25,16 +25,16 @@ public class Problem12 {
     }
 
     private int totalUniqueWays(int n) {
-        int totalTwos = n/2;
+        int totalTwos = n / 2;
         int ones;
-        if(n%2 == 1) {
-            count = count + (n/2)+1;
-        }else{
+        if (n % 2 == 1) {
+            count = count + (n / 2) + 1;
+        } else {
             count = count + 1;
         }
-        totalTwos = totalTwos - 1 ;
-        while(totalTwos > 0) {
-            ones = n - (2*totalTwos);
+        totalTwos = totalTwos - 1;
+        while (totalTwos > 0) {
+            ones = n - (2 * totalTwos);
             count = count + combinations(ones, totalTwos);
             totalTwos--;
         }
@@ -42,17 +42,17 @@ public class Problem12 {
     }
 
     private int combinations(int ones, int twos) {
-        return factorial(ones+twos)/(factorial(ones)*factorial(twos));
+        return factorial(ones + twos) / (factorial(ones) * factorial(twos));
     }
 
-    private int factorial(int n){
+    private int factorial(int n) {
         int fact = 1;
         if (n == 0)
             return 1;
 
-        while(n > 1){
+        while (n > 1) {
             fact = fact * n;
-            n = n-1;
+            n = n - 1;
         }
         return fact;
     }

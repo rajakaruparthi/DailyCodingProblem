@@ -1,6 +1,5 @@
-package com.dailycoding.problem;
+package com.daily.coding;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package com.dailycoding.problem;
+package com.daily.coding;
 
 /*
 This problem was asked by Apple.

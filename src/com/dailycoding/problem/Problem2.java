@@ -1,4 +1,4 @@
-package com.dailycoding.problem;
+package com.daily.coding;
 
 
 /*
@@ -27,10 +27,10 @@ public class Problem2 {
     private static void multiplyOther(List<Integer> input) {
         List<Integer> output = new ArrayList<>();
         int product;
-        for (int i=0; i< input.size();i++){
+        for (int i = 0; i < input.size(); i++) {
             product = 1;
-            for (int j=0; j < input.size(); j++){
-                if(j!=i){
+            for (int j = 0; j < input.size(); j++) {
+                if (j != i) {
                     product = product * input.get(j);
                 }
             }

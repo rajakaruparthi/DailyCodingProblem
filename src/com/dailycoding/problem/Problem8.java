@@ -8,15 +8,12 @@ Given the root to a binary tree, count the number of unival subtrees.
 For example, the following tree has 5 unival subtrees:
  */
 
-import javax.swing.tree.DefaultMutableTreeNode;
-import javax.swing.tree.TreeNode;
-
-class Node{
+class Node {
 
     int value;
     Node right, left;
 
-    public Node(int val){
+    public Node(int val) {
         this.value = val;
         right = left = null;
     }
@@ -32,7 +29,7 @@ public class Problem8 {
 
     public static void main(String[] args) {
 
-        BinarySearchTree tree = new  BinarySearchTree();
+        BinarySearchTree tree = new BinarySearchTree();
         tree.root = new Node(5);
         tree.root.left = new Node(4);
         tree.root.right = new Node(5);

@@ -1,4 +1,4 @@
-package com.dailycoding.problem;
+package com.daily.coding;
 
 
 /*
@@ -17,7 +17,7 @@ import java.util.List;
 public class Problem4 {
 
     public static void main(String[] args) {
-        Integer[] input = {3,4,-1,1};
+        Integer[] input = {3, 4, -1, 1};
         missingPositiveInteger(input);
     }
 

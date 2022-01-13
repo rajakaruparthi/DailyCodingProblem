@@ -1,4 +1,4 @@
-package com.dailycoding.problem;
+package com.daily.coding;
 
 /*
 Given a list of integers, write a function that returns the largest sum of non-adjacent numbers. Numbers can be 0 or negative.
@@ -18,15 +18,15 @@ public class Problem9 {
 
     private static void maxSumNonAdjacent(List<Integer> input) {
 
-        int evenSum =0, oddSum = 0;
+        int evenSum = 0, oddSum = 0;
         for (int i = 0; i < input.size(); i++) {
             // even sum
-            if( i% 2 == 0){
-                evenSum+=input.get(i);
+            if (i % 2 == 0) {
+                evenSum += input.get(i);
             }
             //odd sum
-            else{
-                oddSum+=input.get(i);
+            else {
+                oddSum += input.get(i);
             }
         }
     }
